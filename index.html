@@ -1,0 +1,95 @@
+//Specifications for Unit Tests
+1. Multiplication Function
+Tests:
+
+    Basic Multiplication Test:
+        Description: Tests the multiplication of two positive integers.
+        Input: 3, 4
+        Expected Output: 12
+
+    Multiplication with Zero:
+        Description: Tests the multiplication of a positive integer and zero.
+        Input: 3, 0
+        Expected Output: 0
+
+    Multiplication of Negative Numbers:
+        Description: Tests the multiplication of two negative integers.
+        Input: -3, -4
+        Expected Output: 12
+
+    Mixed Sign Multiplication:
+        Description: Tests the multiplication of a positive and a negative integer.
+        Input: -3, 4
+        Expected Output: -12
+
+    Unexpected Input Type (String):
+        Description: Tests the function with string inputs.
+        Input: "3", "4"
+        Expected Behavior: Throw an error or return null.
+
+2. concatOdds Function
+Tests:
+
+    Basic Odd Concatenation:
+        Description: Combines odd numbers from two arrays in ascending order.
+        Input: [3, 2, 1], [9, 1, 1, 1, 4, 15, -1]
+        Expected Output: [-1, 1, 3, 9, 15]
+
+    Empty Arrays:
+        Description: Tests the function with two empty arrays.
+        Input: [], []
+        Expected Output: []
+
+    Only Even Numbers:
+        Description: Tests the function with arrays containing only even numbers.
+        Input: [2, 4, 6], [8, 10]
+        Expected Output: []
+
+    Unexpected Input Type (String in Array):
+        Description: Tests the function with arrays containing string elements.
+        Input: [3, "4", 5], ["6", 7, 9]
+        Expected Behavior: Throw an error or filter out non-integer values.
+
+Specifications for Functional Tests
+1. Shopping Cart Checkout Feature
+Tests:
+
+    Checkout as Guest:
+        Scenario: User checks out as a guest.
+        Actions:
+            Add items to cart.
+            Proceed to checkout.
+            Choose to checkout as a guest.
+        Expected Behavior: Prompt user to create an account or log in, but also allow them to continue without doing so.
+
+    Checkout as Logged-in User:
+        Scenario: User checks out as a logged-in user.
+        Actions:
+            Log into account.
+            Add items to cart.
+            Proceed to checkout.
+        Expected Behavior: Direct user to payment and shipping details page.
+
+    Empty Cart Checkout:
+        Scenario: User tries to checkout with an empty cart.
+        Actions: Click on checkout button without adding any items.
+        Expected Behavior: Show an error message or notification that the cart is empty.
+
+    Display Cart Contents:
+        Scenario: User views the cart contents before proceeding to checkout.
+        Actions: Click on the cart icon.
+        Expected Behavior: Display all items in the cart with their details (e.g., price, quantity).
+
+    Update Cart Contents:
+        Scenario: User updates the quantity of an item in the cart.
+        Actions:
+            Add item to cart.
+            Go to cart and update the quantity.
+        Expected Behavior: The cart should reflect the updated quantity and total price.
+
+    Checkout Process Feedback:
+        Scenario: User proceeds through the checkout process.
+        Actions:
+            Add items to cart.
+            Click on checkout.
+        Expected Behavior: Provide clear feedback to the user at each step, showing order summary, payment details, shipping details, etc.
